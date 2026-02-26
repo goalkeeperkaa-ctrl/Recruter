@@ -22,3 +22,15 @@ View your app in AI Studio: https://ai.studio/apps/07c2f8a9-7110-4600-ae04-d79eb
 - Route-level code splitting enabled.
 - Build chunking configured (`react`, `charts`, `dnd`).
 - Removed client-side secret exposure from Vite config.
+- Added mock backend scaffold (`server/index.ts`) with core endpoints.
+
+## Mock API run (dev)
+```bash
+npm run dev:api
+```
+Available endpoints:
+- `GET /health`
+- `GET/POST /api/vacancies`
+- `GET/POST /api/candidates`
+- `GET /api/workspaces`
+- `GET /api/pipeline/stages`
