@@ -147,6 +147,7 @@ export default function JourneyBuilder() {
   };
 
   const selectedStep = steps.find(s => s.id === selectedId);
+  const SelectedIcon = selectedStep ? (blockTypes.find(b => b.type === selectedStep.type)?.icon || Type) : Type;
 
   return (
     <div className="h-[calc(100vh-10rem)] flex gap-6">
@@ -231,7 +232,7 @@ export default function JourneyBuilder() {
           <div className="space-y-6">
             <div className="flex items-center gap-3 pb-6 border-b border-white/10">
               <div className="p-2 rounded-lg bg-white/5 text-white border border-white/10">
-                {blockTypes.find(b => b.type === selectedStep.type)?.icon({ size: 20 }) || <Type size={20} />}
+                <SelectedIcon size={20} />
               </div>
               <div>
                 <h3 className="font-medium text-white">Редактировать этап</h3>
