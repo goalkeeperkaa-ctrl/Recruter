@@ -10,11 +10,15 @@ View your app in AI Studio: https://ai.studio/apps/07c2f8a9-7110-4600-ae04-d79eb
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Create `.env.local` from `.env.example` (optional)
 3. Run the app:
    `npm run dev`
+
+## Sprint 0 updates
+- Route-level code splitting enabled.
+- Build chunking configured (`react`, `charts`, `dnd`).
+- Removed client-side secret exposure from Vite config.
